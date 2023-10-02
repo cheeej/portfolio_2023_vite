@@ -1,0 +1,20 @@
+// @charset "UTF-8";
+// @import "setting/variables", "setting/mixin", "setting/fonts", "setting/reset", "section/header", "section/intro",
+//   "section/skill", "section/site", "section/port", "section/contact", "section/footer";
+@import "variables", "mixin", "fonts", "reset", "header", "intro", "skill", "site", "port", "contact", "footer";
+
+// section
+
+// @import url(section/_header.scss);
+// @import url(section/_intro.scss);
+// @import url(section/_skill.scss);
+// @import url(section/_site.scss);
+// @import url(section/_portfolio.scss);
+// @import url(section/_contact.scss);
+// @import url(section/_footer.scss);
+
+// // setting
+// @import url(setting/_fonts.scss);
+// @import url(setting/_mixin.scss);
+// @import url(setting/_variables.scss);
+// @import url(setting/_reset.scss);
