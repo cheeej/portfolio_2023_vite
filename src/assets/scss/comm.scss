@@ -1,10 +1,23 @@
-// @charset "UTF-8";
+@charset "UTF-8";
 // @import "setting/variables", "setting/mixin", "setting/fonts", "setting/reset", "section/header", "section/intro",
 //   "section/skill", "section/site", "section/port", "section/contact", "section/footer";
-@import "variables", "mixin", "fonts", "reset", "header", "intro", "skill", "site", "port", "contact", "footer";
+
+// setting
+@import "setting/_variables";
+@import "setting/_mixin";
+@import "setting/_fonts";
+@import "setting/_reset";
 
 // section
+@import "section/_header";
+@import "section/_intro";
+@import "section/_skill";
+@import "section/_site";
+@import "section/_portfolio";
+@import "section/_contact";
+@import "section/_footer";
 
+// // section
 // @import url(section/_header.scss);
 // @import url(section/_intro.scss);
 // @import url(section/_skill.scss);
@@ -13,7 +26,7 @@
 // @import url(section/_contact.scss);
 // @import url(section/_footer.scss);
 
-// // setting
+// // // setting
 // @import url(setting/_fonts.scss);
 // @import url(setting/_mixin.scss);
 // @import url(setting/_variables.scss);

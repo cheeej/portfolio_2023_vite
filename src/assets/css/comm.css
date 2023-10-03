@@ -1,11 +1,468 @@
-@import url(section/_header.scss);
-@import url(section/_intro.scss);
-@import url(section/_skill.scss);
-@import url(section/_site.scss);
-@import url(section/_portfolio.scss);
-@import url(section/_contact.scss);
-@import url(section/_footer.scss);
-@import url(setting/_fonts.scss);
-@import url(setting/_mixin.scss);
-@import url(setting/_variables.scss);
-@import url(setting/_reset.scss);/*# sourceMappingURL=comm.css.map */
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --mainEng-font: "Montserrat";
+  --mainKor-font: "Noto Sans KR";
+  --mainNum-font: "gmarket";
+  --mainBg-color: #f3ede8;
+  --subBg100: #cdc0b1;
+  --subBg200: #afa395;
+  --subBg300: #81887c;
+  --subBg400: #afa7a2;
+  --subBg500: #a6afa2;
+  --white: #fff;
+  --black: #000;
+  --black100: #2b2b2b;
+  --black200: #434343;
+  --black300: #686868;
+  --black400: #e0e0e0;
+  /* 기본 폰트 설정 */
+  font-family: var(--mainEng-font), var(--mainKor-font);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  /* 폰트를 부드럽게 렌더링하기 위한 속성  */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* 아이폰 가로 모드에서 글씨 확대 금지 */
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 800px) {
+  :root {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+body {
+  color: var(--black100);
+  background-color: var(--mainBg-color);
+}
+
+.mont {
+  font-family: "Montserrat";
+}
+
+.pretendard {
+  font-family: "Pretendard-Regular";
+}
+
+.gmarket {
+  font-family: "GmarketSansMedium";
+}
+
+.notosanskr {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+/* reset */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button,
+header,
+main,
+article {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+fieldset,
+img {
+  border: 0 none;
+  vertical-align: top;
+  width: 100%;
+}
+
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+input,
+select,
+textarea {
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+button {
+  font-size: 100%;
+  vertical-align: middle;
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+}
+
+/* 뷰표트 변환시 폰트크기 자동확대 방지 */
+input[type=text], input[type=password], input[type=submit], input[type=search] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+input:checked[type=checkbox] {
+  background-color: #666;
+  -webkit-appearance: checkbox;
+}
+
+button {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+
+input[type=button], input[type=submit], input[type=reset], input[type=file] {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* 기본 폰트 설정 */
+/* mobile */
+body {
+  background: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+  color: #111;
+}
+
+/* desktop */
+@media screen and (min-width: 1280px) {
+  body {
+    font-size: 16px;
+  }
+}
+/* color값은 디자인가이드에 맞게사용 */
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:active, a:hover, a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+hr {
+  display: none;
+}
+
+input[type=password] {
+  font-family: "Malgun Gothic";
+}
+
+/* 웹폰트 사용시 점이 안보임 - 기본 폰트 사용  */
+/* skipnavigation */
+#skip a {
+  position: absolute;
+  left: 10px;
+  top: -92px;
+  z-index: 100000;
+  font-size: 1rem;
+  padding: 10px 30px;
+  color: var(--white);
+  background: var(--black);
+}
+
+#skip a:focus,
+#skip a:active {
+  top: 10px;
+}
+
+/* 이미지 스프라이트 */
+.img-g {
+  display: inline-block;
+  overflow: hidden;
+  background: url(../../images/comm/img-comm.png) no-repeat;
+  vertical-align: top;
+}
+
+/* 이미지 */
+/* global */
+.ir-pm {
+  display: block;
+  overflow: hidden;
+  font-size: 0px;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+.ir-wa {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+}
+
+/* 중요한 이미지 대체텍스트로 이미지off시에도 대체 텍스트를 보여주고자 할때 */
+.blind,
+caption,
+legend {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */
+.f_l {
+  float: left;
+}
+
+.f_r {
+  float: right;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.tbl {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 테이블 초기화 */
+.clearfix {
+  display: block;
+  overflow: visible;
+  width: auto;
+  clear: both;
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  content: "";
+}
+
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+}
+
+.header_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(116, 99, 99, 0.1);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  padding: 1rem;
+}
+.header_inner .header_logo {
+  font-size: 0.9rem;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.header_inner em {
+  font-size: 10px;
+  display: block;
+  color: var(--blck200);
+}
+
+@media (max-width: 800px) {
+  .header_nav {
+    display: none;
+  }
+  .header_nav.show {
+    display: block;
+  }
+  .header_nav.show ul {
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: rgba(116, 99, 99, 0.1);
+    -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+    z-index: 10000;
+    min-width: 150px;
+    padding: 15px 0;
+  }
+  .header_nav.show ul li {
+    display: block;
+    text-align: right;
+  }
+  .header_nav.show ul li a {
+    display: inline-block;
+    padding: 15px;
+  }
+  .header_nav.show + .header_nav_mobile span::before {
+    width: 20px;
+  }
+  .header_nav.show + .header_nav_mobile span::after {
+    width: 20px;
+  }
+}
+.header_nav li {
+  display: inline-block;
+}
+.header_nav li a {
+  font-size: 14px;
+  padding: 14px;
+  position: relative;
+  text-transform: uppercase;
+}
+.header_nav li a::before {
+  content: "";
+  width: calc(100% - 28px);
+  height: 1px;
+  background-color: var(--black);
+  position: absolute;
+  left: 14px;
+  bottom: 10px;
+  transform: scaleX(0);
+  transition: all 0.4s;
+}
+.header_nav li a:hover::before {
+  transform: scaleX(1);
+}
+
+.header_nav_mobile {
+  display: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  .header_nav_mobile {
+    display: block;
+  }
+}
+.header_nav_mobile span {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #000;
+  margin-top: 19px;
+  position: relative;
+}
+.header_nav_mobile span::before {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  top: 6px;
+  right: 0;
+  transition: width 0.3s;
+}
+.header_nav_mobile span::after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  transition: width 0.3s;
+}/*# sourceMappingURL=comm.css.map */
