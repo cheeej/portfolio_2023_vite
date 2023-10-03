@@ -1,3 +1,7 @@
+* {
+  font-family: --basic-font;
+}
+
 #intro {
   height: 100vh;
 }
@@ -63,9 +67,11 @@
       text-decoration: underline;
       text-align: center;
       padding-right: 10%;
+
       &:hover {
         // color: #698f41;
         color: #76f500;
+
         @media (max-width: 744px) {
           opacity: 0;
         }

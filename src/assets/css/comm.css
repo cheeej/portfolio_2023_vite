@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
+  --basic-font: "pretendard";
   --mainEng-font: "Montserrat";
   --mainKor-font: "Noto Sans KR";
   --mainNum-font: "gmarket";
@@ -201,7 +202,6 @@ input[type=search]::-webkit-search-cancel-button {
 /* 기본 폰트 설정 */
 /* mobile */
 body {
-  background: #fff;
   font-size: 14px;
   line-height: 1.5;
   font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
@@ -340,6 +340,10 @@ legend {
   content: "";
 }
 
+* {
+  font-family: --basic-font;
+}
+
 #header {
   position: fixed;
   left: 0;
@@ -467,6 +471,10 @@ legend {
   transition: width 0.3s;
 }
 
+* {
+  font-family: --basic-font;
+}
+
 #intro {
   height: 100vh;
 }
@@ -566,4 +574,108 @@ legend {
 }
 .intro_inner .intro_text img:hover {
   filter: grayscale(0);
+}
+
+* {
+  font-family: --basic-font;
+}
+
+.skill_inner {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 744px) {
+  .skill_inner {
+    flex-direction: column;
+  }
+}
+.skill_inner .skill_title {
+  position: sticky;
+  top: 100px;
+  left: 0;
+  height: 6vw;
+  width: 45%;
+  font-size: 4vw;
+  font-weight: 900;
+  line-height: 1.6;
+  text-transform: uppercase;
+  color: var(--black100);
+  border-bottom: 0.4vw solid var(--black100);
+}
+@media (max-width: 744px) {
+  .skill_inner .skill_title {
+    width: 100%;
+    margin-bottom: 10vw;
+    font-size: 30px;
+    height: auto;
+    padding-top: 10px;
+    top: 70px;
+    background-color: var(--mainBg-color);
+  }
+}
+.skill_inner .skill_title em {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 2;
+}
+.skill_inner .skill_desc {
+  width: 50%;
+}
+@media (max-width: 744px) {
+  .skill_inner .skill_desc {
+    width: 100%;
+  }
+}
+.skill_inner .skill_desc span {
+  font-size: 5vw;
+  line-height: 1;
+  font-weight: 900;
+  line-height: 1.3;
+}
+@media (max-width: 744px) {
+  .skill_inner .skill_desc span {
+    font-size: 15vw;
+  }
+}
+.skill_inner .skill_desc span em {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  text-underline-position: under;
+  margin-bottom: 1vw;
+}
+.skill_inner .skill_desc h3 {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  text-underline-position: under;
+  margin-bottom: 1vw;
+}
+.skill_inner .skill_desc p {
+  margin-bottom: 30vh;
+  font-size: 1rem;
+}
+@media (max-width: 744px) {
+  .skill_inner .skill_desc p {
+    margin-bottom: 20vh;
+  }
+}
+.skill_inner .skill_desc .d-skill {
+  margin-bottom: 30vh;
+  font-size: 1rem;
+  display: flex;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+@media (max-width: 744px) {
+  .skill_inner .skill_desc .d-skill {
+    margin-bottom: 20vh;
+  }
+}
+.skill_inner .skill_desc .d-skill .skill-icon {
+  padding: 0.4rem 1.2rem;
+  color: var(--black300);
+  font-size: 1.2rem;
+  border: 0.2rem solid var(--subBg200);
+  border-radius: 10rem;
 }/*# sourceMappingURL=comm.css.map */
