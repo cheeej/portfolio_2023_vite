@@ -465,4 +465,105 @@ legend {
   bottom: 6px;
   left: 0;
   transition: width 0.3s;
+}
+
+#intro {
+  height: 100vh;
+}
+
+.intro_inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.intro_inner .inner_title {
+  font-size: 10vw;
+  line-height: 1;
+  font-weight: 800;
+  text-indent: -0.5vw;
+  letter-spacing: -0.2vw;
+  text-wrap: nowrap;
+  padding-bottom: 50px;
+}
+.intro_inner .line {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  padding: 1px 0 10px;
+}
+.intro_inner .intro_text {
+  width: 100%;
+  height: 40vh;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: column;
+  position: relative;
+  cursor: all-scroll;
+}
+@media (max-width: 744px) {
+  .intro_inner .intro_text {
+    align-items: center;
+  }
+}
+.intro_inner .intro_text:hover {
+  background-color: var(--black100);
+}
+@media (max-width: 744px) {
+  .intro_inner .intro_text:hover {
+    background-color: #000;
+  }
+}
+.intro_inner .intro_text .text {
+  font-size: 2.5vw;
+  line-height: 1.2;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-align: center;
+  padding-right: 10%;
+}
+@media (max-width: 744px) {
+  .intro_inner .intro_text .text {
+    z-index: 10000;
+    padding-right: 0;
+    background-color: #000;
+    padding: 10px 50px;
+    font-size: 20px;
+  }
+}
+.intro_inner .intro_text .text:hover {
+  color: #76f500;
+}
+@media (max-width: 744px) {
+  .intro_inner .intro_text .text:hover {
+    opacity: 0;
+  }
+}
+.intro_inner .intro_text img {
+  position: absolute;
+  left: 23%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 32vh;
+  height: 40vh;
+  filter: grayscale(100%);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+@media (max-width: 744px) {
+  .intro_inner .intro_text img {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.intro_inner .intro_text img:hover {
+  filter: grayscale(0);
 }/*# sourceMappingURL=comm.css.map */

@@ -1,0 +1,98 @@
+#intro {
+  height: 100vh;
+}
+.intro_inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  // padding: 16px;
+  .inner_title {
+    font-size: 10vw;
+    // text-transform: uppercase;
+    line-height: 1;
+    font-weight: 800;
+    text-indent: -0.5vw;
+    letter-spacing: -0.2vw;
+    text-wrap: nowrap;
+    padding-bottom: 50px;
+  }
+  .line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: $b;
+    padding: 1px 0 10px;
+  }
+  .intro_text {
+    @media (max-width: 744px) {
+      align-items: center;
+    }
+    width: 100%;
+    height: 40vh;
+    background-color: $b;
+    color: $w;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+    position: relative;
+    cursor: all-scroll;
+    &:hover {
+      background-color: var(--black100);
+      @media (max-width: 744px) {
+        background-color: $b;
+      }
+    }
+    .text {
+      @media (max-width: 744px) {
+        // align-items: center;
+        z-index: 10000;
+        padding-right: 0;
+        background-color: $b;
+        padding: 10px 50px;
+        font-size: 20px;
+      }
+
+      font-size: 2.5vw;
+      line-height: 1.2;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-decoration: underline;
+      text-align: center;
+      padding-right: 10%;
+      &:hover {
+        // color: #698f41;
+        color: #76f500;
+        @media (max-width: 744px) {
+          opacity: 0;
+        }
+      }
+    }
+    img {
+      @media (max-width: 744px) {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      position: absolute;
+      left: 23%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 32vh;
+      height: 40vh;
+      // border-radius: 50%;
+      filter: grayscale(100%);
+      transition: all 0.3s;
+      cursor: pointer;
+      &:hover {
+        filter: grayscale(0);
+        // @media (max-width: 744px) {
+        //   filter: grayscale(0);
+        // }
+      }
+    }
+  }
+}
